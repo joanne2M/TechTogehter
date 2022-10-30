@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+ 
+body{
+    background-color: white;
+}
+        figure {
+            margin: 0;
+        }
+ 
+        html,
+        body,
+        .bank {
+            height: 100%;
+        }
+ 
+        body {
+            overflow: hidden;
+            margin: 0;
+        }
+ 
+        .bank {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Optima, sans-serif;
+        }
+ 
+        .mobile {
+            max-width: 600px;
+            width: 90%;
+            height: 95%;
+            background-color: white;
+            border-radius: 35px;
+            padding: 0 20px;
+            box-shadow: -3px 2px 19px #dadada;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding-bottom: 10px;
+        }
+ 
+        .profile {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            margin: 20px 0;
+        }
+ 
+        .profile__avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: #96edc9;
+            border-radius: 40%;
+            margin: 0;
+        }
+ 
+        .profile__avatar img {
+            width: 50%;
+        }
+ 
+        .profile__name {
+            font-weight: 600;
+            margin: 0 20px;
+            font-size: 15px;
+        }
+ 
+        .balance {
+            margin: 20px 0;
+        }
+ 
+        .balance__text {
+            font-size: 15px;
+            color: black;
+            margin-bottom: 10px;
+        }
+ 
+        .balance__amount {
+            font-weight: 600;
+            font-size: 36px;
+        }
+ 
+        .card {
+            display: flex;
+            flex-direction: column;
+            background: rgb(48, 188, 238);
+            background: linear-gradient(90deg, rgba(48, 188, 238, 1) 0%, rgba(21, 208, 149, 1) 100%);
+            margin: 20px 0;
+            border-radius: 20px;
+            padding: 25px 30px;
+        }
+ 
+        .card__information {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: center;
+            justify-content: space-between;
+        }
+ 
+        .card__information__text {
+            font-size: 20px;
+            color: #ffffff;
+            line-height: 26px;
+            font-weight: 600;
+            margin-right: 25px;
+        }
+ 
+        .card__button {
+            width: 100%;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            line-height: 45px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+ 
+        .nav {
+            display: flex;
+        }
+ 
+        .tabs {
+            min-height: 35%;
+        }
+ 
+        .nav__tab {
+            margin-top: 10%;
+            font-size: 16px;
+            font-weight: 600;
+            color: black;
+            width: 150px;
+            cursor: pointer;
+        }
+ 
+        .nav__tab--active {
+            color: #000000;
+        }
+ 
+        .indicator {
+            display: inline-block;
+            background-color: #38c1ff;
+            height: 4px;
+            border-radius: 20px;
+            vertical-align: 3px;
+            transform: translate(calc(var(--i)* 150px));
+            transition-duration: 0.3s;
+        }
+ 
+        .content {
+            margin-top: 15px;
+            user-select: none;
+            pointer-events: none;
+            opacity: 0;
+            height: 0;
+        }
+ 
+        .content:first-child {
+            opacity: 1;
+            height: auto;
+        }
+ 
+        .today {
+            display: flex;
+            justify-content: space-between;
+            color: black;
+        }
+ 
+        .transaction {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+        }
+ 
+        .transaction__who {
+            display: flex;
+            align-items: center;
+        }
+ 
+        .transaction__who figure {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 40%;
+            margin-right: 20px;
+        }
+ 
+        .transaction__who img {
+            width: 40%;
+        }
+ 
+        .transaction__who__name {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+ 
+        .transaction__who__type {
+            color: black;
+            font-size: 13px;
+        }
+ 
+        .transaction__data__amount {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+ 
+        .transaction__data__amount--depot {
+            color: #58c87e;
+        }
+ 
+        .transaction__data__date {
+            color: blue;
+            font-size: 13px;
+            text-align: right;
+        }
+ 
+        .transaction__who--apple figure,
+        .transaction__who--amazon figure {
+            background-color: black;
+        }
+ 
+        .transaction__who--tom figure {
+            background-color: #5cdfac;
+        }
+ 
+        .transaction__who--tom figure img,
+        .transaction__who--amazon figure img {
+            width: 50%;
+        }
+/*
+Designed by : https://dribbble.com/shots/15415867-CapWay-Redesign-Mobile-Banking-App */
+    .row{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+ 
+    .column{
+        width: 45%;
+        margin: 0 2% 0 2%;
+        text-align: center;
+        border: #38c1ff;
+    }
+    .left{
+        float: left;
+       
+    }
+    .right{
+        float: right;
+ 
+    }
+    .value{
+        font-size: larger;
+        /* align-content: center;  */
+        margin: auto;
+    }
+ 
+    .circle{
+        /* font-size: larger; */
+        width: 125px;
+        line-height: 120px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 32px;
+        border: 4px double #000;
+    }
+ 
+    #mobilescreen{
+        width:340px;
+        height:480px;
+        background:#fff;
+        margin:0 auto;
+        position:relative;
+        overflow:hidden;
+        border:2px solid #ccc;
+        padding:20px 5px 100px 5px;
+        border-radius:20px;
+        box-shadow:0px 5px 5px 0px #ccc;
+    }
+
+    #controlder
+    {
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#f2f2f2;
+    margin:15px auto;
+    box-shadow:inset 0px 0px 10px 0px #bdbdbd;
+    border:1px solid #c6c6c6;
+    }
+
+    @import url(https://fonts.googleapis.com/css?family=Andika);
+
+    *
+    {
+    margin:0px;
+    padding:0px;
+    outline:none;
+    }
+    
+    html{height:100%}
+     
+    body{
+    background: black;
+    padding:10px;
+    font-family:'Andika', sans-serif;
+    color: black;
+    }
+    
+    #mobilescreen
+    {
+    width:340px;
+    height:480px;
+    background: white;
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+    border:2px solid #ccc;
+    padding:20px 5px 100px 5px;
+    border-radius:20px;
+    box-shadow:0px 5px 5px 0px #ccc;
+    }
+    
+    #maincontainer
+    {
+    width:320px;
+    margin:0 auto;
+    background:black;
+    position:relative;
+    overflow: hidden;
+    height:100%;
+    }
+    
+    #mainscreen
+    {
+    position:absolute;
+    height:100%;
+    left:0px;
+    top:0px;
+    width:100%; 
+    -webkit-transition:0.2s;
+    -ms-transition:0.2s;
+    -o-transition:0.2s;
+    -moz-transition:0.2s;
+    transition:0.2s;     
+    }
+    
+    section
+    {
+    padding:0px;
+    margin:0px;
+    }
+    
+    header
+    {
+    width:100%;
+    height:50px;
+    background: white;
+    position:relative;
+    }
+    
+    .fa-align-justify
+    {
+    color: red;
+    position:absolute;
+    left:0px;
+    top:0px;
+    height:50px;
+    width:50px;
+    display:table-cell;
+    line-height:55px;
+    text-align:center;
+    cursor:pointer;
+    }
+    
+    .fa-shopping-cart
+    {
+    color:red;
+    position:absolute;
+    right:0px;
+    top:0px;
+    height:50px;
+    width:50px;
+    display:table-cell;
+    line-height:50px;
+    text-align:center;
+    cursor:pointer;
+    }
+    
+    h1
+    {
+    width:100%;
+    text-align:center;
+    color: black;
+    font-size:2em;
+    height:50px;
+    line-height:50px;
+    }
+    
+    button
+    {
+    width:50%;
+    border:none;
+    height:50px;
+    font-size:0.8em;
+    font-weight:bold;
+    cursor:pointer;
+    }
+    
+    footer
+    {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    height:50px;
+    }
+    
+    #showcode
+    {
+    background: red;
+    }
+    #buyproduct
+    {
+    background: #024059
+    }
+    
+    .intro
+    {
+    text-align:center;
+    font-size:1em;
+    color: white;
+    }
+    
+    #container
+    {
+    padding:10px 30px;
+    }
+    
+    #listlink{margin:0px; padding:0px 0px 0px 0px;}
+    li{
+    list-style-type:none;
+    padding:20px 10px;
+    position:relative;
+    background:#1b2125;
+    border-radius:5px;
+    margin-top:15px;
+    color: red;
+    cursor:pointer;
+    }
+    #listlink li i
+    {
+    margin-right:20px;
+    z-index:99;
+    }
+    #listlink li .titles
+    {
+    z-index:5;
+    position:absolute;
+    left:1em;
+    top:0.4em;
+    font-size: small;
+    }
+    
+    .offdata
+    {
+    position:absolute;
+    right:1em;
+    top:0.3em;
+    color:#fff;
+    font-size:1.1em;
+    }
+    #listlink li div
+    {
+    position:absolute;
+    left:0px;
+    top:0px;
+    height:100%;
+    width:3px;
+    border-radius:5px 0px 0px 5px;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    transition:0.5s;
+    }
+    
+    #listlink li:nth-child(1) div{background:#fe7559;}
+    #listlink li:nth-child(2) div{background:#1280e3;}
+    #listlink li:nth-child(3) div{background:#D92938;}
+    #listlink li:nth-child(4) div{background:#024059;}
+    #listlink li:nth-child(5) div{background:#e3aa12;}
+    #listlink li:nth-child(6) div{background:#12e392;}
+    
+    #listlink li span
+    {
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    transition:0.5s;
+    }
+    
+    #listlink li:hover div
+    {
+    width:100%;
+    border-radius:5px;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    transition:0.5s;
+    }
+    #listlink li:hover span
+    {
+    color:#fff;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    transition:0.5s;
+    }
+    
+    #controlder
+    {
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#f2f2f2;
+    margin:15px auto;
+    box-shadow:inset 0px 0px 10px 0px #bdbdbd;
+    border:1px solid #c6c6c6;
+    }
+    
+    #speaker
+    {
+    width:50px;
+    height:5px;
+    border-radius:15px;
+    background:#f2f2f2;
+    margin:0px auto 15px;
+    box-shadow:inset 0px 0px 10px 0px #bdbdbd, inset 0px 5px 0px 0px #bdbdbd;
+    border:1px solid #c6c6c6;
+    }
+    
+    #mainmenu
+    {
+    width:125px;
+    height:100%;
+    background:#1b2125;
+    position:absolute;
+    top:0px;
+    left:-125px;
+    z-index:99;
+    -webkit-transition:0.2s;
+    -ms-transition:0.2s;
+    -o-transition:0.2s;
+    -moz-transition:0.2s;
+    transition:0.2s;
+    }
+    #mainmenu2
+    {
+    width:125px;
+    height:100%;
+    background:#1b2125;
+    position:absolute;
+    top:0px;
+    right:-125px;
+    z-index:99;
+    -webkit-transition:0.2s;
+    -ms-transition:0.2s;
+    -o-transition:0.2s;
+    -moz-transition:0.2s;
+    transition:0.2s;
+    }
+    
+    .showmenu
+    {
+    left:0px!important;
+    -webkit-transition:0.2s;
+    -ms-transition:0.2s;
+    -o-transition:0.2s;
+    -moz-transition:0.2s;
+    transition:0.2s;
+    }
+    
+    .movemaincontainer
+    {
+    margin-left:125px!important;
+    -webkit-transition:0.2s;
+    -ms-transition:0.2s;
+    -o-transition:0.2s;
+    -moz-transition:0.2s;
+    transition:0.2s;
+    }
+    
+    h2
+    {
+    text-align:center;
+    color:#58626b;
+    font-size:1.1em;
+    padding:10px 0px;
+    }
+    
+    #mainmenu ul li
+    {
+    padding:5px 10px;
+    }
+    
+    #mainmenu ul li:hover
+    {
+    color:#f36175;
+    }

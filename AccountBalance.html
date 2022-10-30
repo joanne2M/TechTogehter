@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="AccountBalance.css">
+    </head>
+    <body>
+
+
+        <section id="mobilescreen">
+            <div>
+                <!-- Title -->
+                <h1 style="text-align: center;"> My Balances </h1>
+               
+                <div class="row">
+                    <div class="column left">
+                        <h2> Checking</h2>
+                    </div>
+                    <div class="column right">
+                        <h2> Savings </h2>
+                    </div>
+                </div>
+                <!-- Balance -->
+                <div class="row">
+                    <div class=" column left">
+                        <div class="circle value"> $25,000 </div>
+
+                        <script>
+
+                        // function myFunction() {
+                        //     // alert(JSON.stringify(response));
+                        //     alert("Here I am");
+                        // }
+
+                        // creating a new customer
+                        // var myHeaders = new Headers();
+                        // myHeaders.append("Content-Type", "application/json");
+                        // var raw = JSON.stringify({
+                        // "first_name": "Tatiana",
+                        // "last_name": "King",
+                        // "address": {
+                        //     "street_number": "10",
+                        //     "street_name": "Deer St.",
+                        //     "city": "Tulsa",
+                        //     "state": "OH",
+                        //     "zip": "74008"
+                        // }
+                        // });
+                        // var requestOptions = {
+                        // method: 'POST',
+                        // headers: myHeaders,
+                        // body: raw,
+                        // redirect: 'follow'
+                        // };
+                        //fetch("http://api.nessieisreal.com/customers?key=6e96f4da716e680643765ddadca20dc4", requestOptions)
+                        // // .then(response => response.json())
+                        // // .then(result => console.log(response))
+                        // // .catch(error => console.log('error', error));
+                        // // var data => JSON.stringify(response)
+                        // // alert("here it is" + data)
+                        // // alert("here I am");
+                        // // alert("here it is " + JSON.stringify(response[0]));
+                        // // alert("here it is ");
+                        // // alert(result);
+                        // // alert(JSON.stringify(response));
+                        // </script>
+
+                    </div>
+                    <div class="column right">
+                        <div class="circle value"> $5500</div>
+                    </div>
+                </div>
+                    <!--  Here is where we will show the balance  -->
+                <!-- Transactions -->
+                <!--  Here is where wwe'll show transactions -->
+   
+            </div>
+
+            <!-- <div class="profile">
+                <figure class="profile__avatar"><img src="https://i.ibb.co/G78wzN3/sophie.png"></figure>
+                <div class="profile__name">Sophie L.</div>
+            </div> -->
+           
+            <!-- <div class="card">
+                <div class="card__information">
+                    <div class="card__information__text">Your CapWay card is being produced</div>
+                    <img src="https://i.ibb.co/K2JF3gt/capway-card.png">
+                </div>
+                <button class="card__button">Check status</button>
+            </div> -->
+            <div class="tabs">
+                <nav class="nav">
+                    <div class="nav__tab nav__tab--active"><span class="nav__tab__text">Transactions</span></div>
+                    <!-- <div class="nav__tab"><span class="nav__tab__text">Deposits</span></div> -->
+                </nav>
+                <div class="indicator"></div>
+                <div class="contents">
+                    <div class="content">
+                        <div class="today">
+                            <div>Today, 9 Jan</div>
+                            <div>-$430.08</div>
+                        </div>
+                        <div class="transaction">
+                            <div class="transaction__who transaction__who--apple">
+                                <!-- <figure><img src="https://i.ibb.co/Br7zP94/apple.png"></figure> -->
+                                <div class="transaction__who__about">
+                                    <div class="transaction__who__name">Apple</div>
+                                    <div class="transaction__who__type">Appliances</div>
+                                </div>
+                            </div>
+                            <div class="transaction__data">
+                                <div class="transaction__data__amount">- $1897.00</div>
+                                <div class="transaction__data__date">11:45 AM</div>
+                            </div>
+                        </div>
+                        <div class="transaction">
+                            <div class="transaction__who transaction__who--tom">
+                                <!-- <figure><img src="https://i.ibb.co/QMx2mJv/tom.png"></figure> -->
+                                <div class="transaction__who__about">
+                                    <div class="transaction__who__name">Tom S.</div>
+                                    <div class="transaction__who__type">Refill</div>
+                                </div>
+                            </div>
+                            <div class="transaction__data">
+                                <div class="transaction__data__amount transaction__data__amount--depot">+ $250.00</div>
+                                <div class="transaction__data__date">11:45 AM</div>
+                            </div>
+                        </div>
+                        <div class="transaction">
+                            <div class="transaction__who transaction__who--amazon">
+                                <!-- <figure><img src="https://i.ibb.co/f06Bptb/amazon.png"></figure> -->
+                                <div class="transaction__who__about">
+                                    <div class="transaction__who__name">Amazon</div>
+                                    <div class="transaction__who__type">Purchases</div>
+                                </div>
+                            </div>
+                            <div class="transaction__data">
+                                <div class="transaction__data__amount">- $32.76</div>
+                                <div class="transaction__data__date">4:12 AM</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="content">
+                        <div class="transaction">
+                            <div class="transaction__who">
+                                <div class="transaction__who__about">
+                                    <div class="transaction__who__name">Deposit</div>
+                                </div>
+                            </div>
+                            <div class="transaction__data">
+                                <div class="transaction__data__amount transaction__data__amount--depot">+ $250.00</div>
+                                <div class="transaction__data__date">11:45 AM</div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+      
+            <div id="controlder"></div>
+            </section>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
